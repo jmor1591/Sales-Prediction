@@ -181,3 +181,17 @@ if not os.path.exists(output_directory):
 # plt.xlabel("Rating")
 # plt.ylabel("Quantity")
 # plt.show()
+
+""" # Product line Distribution
+plt.figure(figsize=(12, 6))
+productline = df["Product line"].value_counts().reset_index()
+productline.columns = ['Product line', 'Count']  # Rename the columns
+
+plt.pie(productline['Count'],
+        labels=productline['Product line'], autopct='%1.1f%%')
+plt.title("Product line Distribution")
+
+plt.savefig('plots/product_line_distribution.png',
+            format='png', dpi=300, bbox_inches='tight')
+
+plt.show() """
